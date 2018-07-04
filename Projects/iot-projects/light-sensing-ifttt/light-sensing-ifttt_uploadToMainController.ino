@@ -1,12 +1,10 @@
-#include "DHT.h"
-#define DHTTYPE DHT11
+
 #define PIN_LIGHT A1
 
 
 void setup() {
-  Serial.println("DHTxx test!");
 
-  Serial1.begin(115200);
+  Serial1.begin(9600);
 
   pinMode(PIN_LIGHT, INPUT);
 }
@@ -17,13 +15,15 @@ void loop() {
   int lightState;
 
   if (lightValue > 50) {
-    lightState == 0;
+    lightState = 0;
   } else if (lightValue < 50) {
-    lightState == 1;
+    lightState = 1;
   }
 
   unsigned char storeBytes[1] = { lightState };
   Serial1.write(storeBytes, 1);
+  
+  Serial.println(lightState);
 
-  delay(150);
+  delay(100);
 }
