@@ -23,7 +23,5 @@ void loop() {
   unsigned char storeBytes[1] = { lightState };
   Serial1.write(storeBytes, 1);
   
-  Serial.println(lightState);
-
   delay(100);
 }
