@@ -1,7 +1,7 @@
 #include <ESP8266WiFi.h>
 #include <ESP8266HTTPClient.h>
 
-int inBytes[3];
+int inBytes[1];
 
 const char *SERVER_WIFI_SSID = "...";
 const char *SERVER_WIFI_PASS = "...";
